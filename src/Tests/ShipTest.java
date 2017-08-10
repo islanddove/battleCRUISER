@@ -1,10 +1,12 @@
 package Tests;
 
 import java.util.*;
+import game.*;
 
-import org.junit.jupiter.api.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class ShipTest {
 
@@ -12,6 +14,12 @@ public class ShipTest {
     public void doNothing(){
         assertEquals("hi", "hi");
         assertFalse(false);
+    }
+
+    @Before
+    public void createShips(){
+        AbstractBattleshipFactory factory = new GameFactory();
+        Ship testShip = factory.CreateShip();
     }
 
 }
