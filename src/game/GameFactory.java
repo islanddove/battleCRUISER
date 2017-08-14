@@ -3,8 +3,8 @@ package game;
 public class GameFactory implements AbstractBattleshipFactory{
 
     @Override
-    public Ship CreateShip() {
-        return new Ship();
+    public Ship CreateShip(int size) {
+        return new Ship(size);
     }
 
     @Override
@@ -16,4 +16,10 @@ public class GameFactory implements AbstractBattleshipFactory{
     public Board CreateBoard() {
         return new Board();
     }
+
+    @Override
+    public Coordinate CreateCoordinate(int x, int y){
+        return new Coordinate(x,y);
+    }
+
 }
