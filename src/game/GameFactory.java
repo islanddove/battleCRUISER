@@ -3,8 +3,8 @@ package game;
 public class GameFactory implements AbstractBattleshipFactory{
 
     @Override
-    public Ship CreateShip(int size) {
-        return new Ship(size);
+    public Ship CreateShip() {
+        return new Ship();
     }
 
     @Override

@@ -21,7 +21,7 @@ public class ShipCoordinateTest {
     @Before
     public void createShipsAndCoords(){
         factory = new GameFactory();
-        testShip = factory.CreateShip(1);
+        testShip = factory.CreateShip();
         testCoordinate = factory.CreateCoordinate(0,0);
     }
 
