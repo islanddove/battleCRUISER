@@ -17,7 +17,12 @@ public class Ship {
         coordinates.add(coord);
     }
 
-    public List<Coordinate> getCoordinates(){
-        return coordinates;
+    public boolean shipIsSunk(){
+        for (Coordinate c  :  coordinates){
+            if(c.getTimesHit() == 0){
+                return false;
+            }
+        }
+        return true;
     }
 }

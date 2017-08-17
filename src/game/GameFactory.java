@@ -13,8 +13,8 @@ public class GameFactory implements AbstractBattleshipFactory{
     }
 
     @Override
-    public Board CreateBoard() {
-        return new Board();
+    public Board CreateBoard(int width, int height) {
+        return new Board(width, height);
     }
 
     @Override
